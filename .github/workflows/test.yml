@@ -26,14 +26,5 @@ jobs:
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
 
-      - name: Check types
-        run: npm run check-types
-
-      - name: Check formatting
-        run: npm run format:check
-
-      - name: Lint code
-        run: npm run lint
-
-      - name: Run unit tests
-        run: npm test
+      - name: Run validate script
+        run: npm run validate
