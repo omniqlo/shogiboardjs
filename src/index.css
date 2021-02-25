@@ -1,0 +1,102 @@
+.sb .board {
+	position: relative;
+	box-sizing: border-box;
+	background-image: url("https://raw.githubusercontent.com/WandererXII/lishogi/master/public/images/board/solid-natural.png");
+	background-size: 100%;
+	user-select: none;
+}
+.sb .piece {
+	position: absolute;
+	width: calc(100% / 9);
+	height: calc(100% / 9);
+	background-size: 100%;
+	will-change: transform;
+}
+.sb .piece.dragging {
+	pointer-events: none;
+	z-index: 2;
+}
+.sb .piece.bp {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/0FU.svg");
+}
+.sb .piece.bl {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/0KY.svg");
+}
+.sb .piece.bn {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/0KE.svg");
+}
+.sb .piece.bs {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/0GI.svg");
+}
+.sb .piece.bg {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/0KI.svg");
+}
+.sb .piece.bb {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/0KA.svg");
+}
+.sb .piece.br {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/0HI.svg");
+}
+.sb .piece.bk {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/0GY.svg");
+}
+.sb .piece.bpp {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/0TO.svg");
+}
+.sb .piece.bpl {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/0NK.svg");
+}
+.sb .piece.bpn {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/0NK.svg");
+}
+.sb .piece.bps {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/0NG.svg");
+}
+.sb .piece.bpb {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/0UM.svg");
+}
+.sb .piece.bpr {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/0RY.svg");
+}
+.sb .piece.wp {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/1FU.svg");
+}
+.sb .piece.wl {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/1KY.svg");
+}
+.sb .piece.wn {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/1KE.svg");
+}
+.sb .piece.ws {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/1GI.svg");
+}
+.sb .piece.wg {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/1KI.svg");
+}
+.sb .piece.wb {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/1KA.svg");
+}
+.sb .piece.wr {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/1HI.svg");
+}
+.sb .piece.wk {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/1OU.svg");
+}
+.sb .piece.wpp {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/1TO.svg");
+}
+.sb .piece.wpl {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/1NK.svg");
+}
+.sb .piece.wpn {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/1NK.svg");
+}
+.sb .piece.wps {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/1NG.svg");
+}
+.sb .piece.wpb {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/1UM.svg");
+}
+.sb .piece.wpr {
+	background-image: url("https://raw.githubusercontent.com/Ka-hu/shogi-pieces/master/kanji_brown/1RY.svg");
+}

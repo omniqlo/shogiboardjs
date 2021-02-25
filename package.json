@@ -40,6 +40,7 @@
     "lint-staged": "^10.5.4",
     "microbundle": "^0.13.0",
     "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.4",
     "pinst": "^2.1.6",
     "pkg-ok": "^2.3.1",
     "prettier": "^2.2.1",
@@ -60,6 +61,10 @@
     "env": {
       "browser": true,
       "jest": true
+    },
+    "rules": {
+      "import/prefer-default-export": "off",
+      "no-plusplus": "off"
     }
   },
   "files": [
@@ -93,7 +98,7 @@
     "build": "rimraf dist && microbundle -i src/index.ts --tsconfig tsconfig.build.json",
     "check-types": "tsc --noEmit",
     "clean": "rimraf coverage dist node_modules",
-    "dev": "microbundle watch -i src/index.ts --tsconfig tsconfig.build.json",
+    "dev": "rimraf dist && parcel index.html --open",
     "format": "prettier --loglevel=error --write .",
     "format:check": "prettier --list-different .",
     "lint": "eslint --ext .js,.ts .",
