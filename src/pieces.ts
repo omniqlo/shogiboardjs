@@ -1,3 +1,56 @@
+export const emptySquare = "";
+
+export const isBlackPiece = (piece: string): boolean =>
+	piece.toLowerCase() !== piece && piece !== emptySquare;
+export const isWhitePiece = (piece: string): boolean =>
+	piece.toLowerCase() === piece && piece !== emptySquare;
+
+export const getPieceInHand: Record<string, string> = {
+	"P": "p",
+	"L": "l",
+	"N": "n",
+	"S": "s",
+	"G": "g",
+	"B": "b",
+	"R": "r",
+	"+P": "p",
+	"+L": "l",
+	"+N": "n",
+	"+S": "s",
+	"+B": "b",
+	"+R": "r",
+	"p": "P",
+	"l": "L",
+	"n": "N",
+	"s": "S",
+	"g": "G",
+	"b": "B",
+	"r": "R",
+	"+p": "P",
+	"+l": "L",
+	"+n": "N",
+	"+s": "S",
+	"+b": "B",
+	"+r": "R",
+};
+
+export const getPieceFromPieceCss: Record<string, string> = {
+	bp: "P",
+	bl: "L",
+	bn: "N",
+	bs: "S",
+	bg: "G",
+	bb: "B",
+	br: "R",
+	wp: "P",
+	wl: "l",
+	wn: "n",
+	ws: "s",
+	wg: "g",
+	wb: "b",
+	wr: "r",
+};
+
 export const getPieceCssFromPiece: Record<string, string> = {
 	"P": "bp",
 	"L": "bl",
@@ -27,21 +80,4 @@ export const getPieceCssFromPiece: Record<string, string> = {
 	"+s": "wps",
 	"+b": "wpb",
 	"+r": "wpr",
-};
-
-export const getPieceFromPieceCss: Record<string, string> = {
-	bp: "P",
-	bl: "L",
-	bn: "N",
-	bs: "S",
-	bg: "G",
-	bb: "B",
-	br: "R",
-	wp: "P",
-	wl: "l",
-	wn: "n",
-	ws: "s",
-	wg: "g",
-	wb: "b",
-	wr: "r",
 };
