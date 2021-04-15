@@ -1,12 +1,41 @@
-name: Release
+name: Test and Publish
 
 on:
   push:
     branches:
       - main
+  pull_request:
 
 jobs:
-  release:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node: [12, 14, 15]
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install dependencies
+        uses: bahmutov/npm-install@v1
+
+      - name: Run validate script
+        run: npm run validate
+
+  publish:
+    needs: test
+
+    if: ${{ github.repository == 'omniqlo/shogiboardjs' &&
+      github.ref == 'refs/heads/main' &&
+      github.event_name == 'push' }}
+
     runs-on: ubuntu-latest
 
     steps:
@@ -20,9 +49,6 @@ jobs:
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
-
-      - name: Run validate script
-        run: npm run validate
 
       - name: Build
         run: npm run build

@@ -259,7 +259,7 @@ function Shogiboard(elementId: string): void {
 			} else if (pieceDom.classList.contains("piece-in-hand")) {
 				// clicked a piece in hand
 				if (pieceDom.classList.contains("transparent")) return;
-				let piece: string = "";
+				let piece = "";
 				pieceDom.classList.forEach((c) => {
 					if (
 						c !== "piece-in-hand" &&
@@ -296,5 +296,6 @@ function Shogiboard(elementId: string): void {
 	}
 }
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 window.Shogiboard = Shogiboard;

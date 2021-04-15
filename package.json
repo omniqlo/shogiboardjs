@@ -23,49 +23,30 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
-    "@types/jest": "^26.0.20",
-    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
+    "@types/jest": "^26.0.22",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
     "commitizen": "^4.2.3",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^7.20.0",
+    "eslint": "^7.24.0",
     "eslint-config-airbnb-typescript": "^12.3.1",
-    "eslint-config-prettier": "^7.2.0",
+    "eslint-config-prettier": "^8.2.0",
     "eslint-plugin-import": "^2.22.1",
     "fixpack": "^4.0.0",
-    "husky": "^5.0.9",
-    "is-ci": "^2.0.0",
+    "husky": "^6.0.0",
+    "is-ci": "^3.0.0",
     "jest": "^26.6.3",
     "lint-staged": "^10.5.4",
     "microbundle": "^0.13.0",
     "npm-run-all": "^4.1.5",
-    "parcel-bundler": "^1.12.4",
+    "parcel-bundler": "^1.12.5",
     "pinst": "^2.1.6",
     "pkg-ok": "^2.3.1",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
-    "ts-jest": "^26.5.1",
-    "typescript": "^4.1.5"
-  },
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "airbnb-typescript/base",
-      "prettier",
-      "prettier/@typescript-eslint"
-    ],
-    "parserOptions": {
-      "project": "./tsconfig.eslint.json"
-    },
-    "env": {
-      "browser": true,
-      "jest": true
-    },
-    "rules": {
-      "import/prefer-default-export": "off",
-      "no-plusplus": "off"
-    }
+    "ts-jest": "^26.5.4",
+    "typescript": "^4.2.4"
   },
   "files": [
     "dist"
@@ -97,7 +78,7 @@
   "scripts": {
     "build": "rimraf dist && microbundle -i src/index.ts --tsconfig tsconfig.build.json",
     "check-types": "tsc --noEmit",
-    "clean": "rimraf coverage dist node_modules",
+    "clean": "rimraf .cache coverage dist node_modules",
     "dev": "rimraf dist && parcel index.html --open",
     "format": "prettier --loglevel=error --write .",
     "format:check": "prettier --list-different .",
@@ -109,6 +90,6 @@
     "test": "jest",
     "test:coverage": "npm test -- --coverage",
     "test:watch": "npm test -- --watch",
-    "validate": "npm-run-all check-types format:check lint test"
+    "validate": "run-s check-types format:check lint test"
   }
 }
