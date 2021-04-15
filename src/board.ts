@@ -1,5 +1,8 @@
-export function createBoardFromSfen(boardSfen: string): string[] {
-	const board: string[] = new Array(81);
+import type {Board} from "./types";
+
+export function createBoardFromSfen(sfen: string): Board {
+	const boardSfen = sfen.split(" ")[0];
+	const board: Board = new Array(81);
 	let square = 0;
 	for (let i = 0; i < boardSfen.length; i++) {
 		if (boardSfen[i] === "/") {
